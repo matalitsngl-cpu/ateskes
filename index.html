@@ -408,6 +408,7 @@ function resetSystem(){
         statsRef.once("value", (snap) => {
             let current = snap.val() || { peaceCount: 0, resetCount: 0 };
             statsRef.update({ resetCount: (current.resetCount || 0) + 1 });
+
         });
     }
 }
